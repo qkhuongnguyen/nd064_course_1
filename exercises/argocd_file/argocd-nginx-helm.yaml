@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-alpine
+  namespace: argocd
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    # path to the folder with the YAML manifests
+    helm:
+      valueFiles:
+      - values.yaml
+    path: exercises/ex_nginx
+    repoURL: https://github.com/qkhuongnguyen/nd064_course_1
+    targetRevision: HEAD
+  # Sync policy
+  syncPolicy: {}

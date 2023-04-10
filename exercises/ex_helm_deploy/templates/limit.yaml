@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: nginx-limit
+  namespace: {{ .Values.namespace.name }}
+spec:
+  limits:
+  - default:
+      memory: {{ .Values.limit.memory }} 
+    default:
+      cpu: {{ .Values.limit.cpu }}
+    type: Container
