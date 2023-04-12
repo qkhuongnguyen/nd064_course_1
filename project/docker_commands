@@ -1,11 +1,77 @@
 ## Docker commands used to build the application 
 # TODO: insert the docker build command
-
+docker build -t techtrends ~/nd064_course_1/project/
 ## Docker commands used to run the application
 # TODO: insert the docker run command
-
+docker run -d -p 7111:3111 techtrends
 ## Docker commands used to get the application logs
 # TODO: insert the docker logs command
-
+docker logs a09a909cea26
 ## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
+# TODO: paste logs from the Docker container
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+2023-04-12 02:25:05,349,  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2023-04-12 02:25:05,349,  * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+2023-04-12 02:25:24,604, 172.17.0.1 - - [12/Apr/2023 02:25:24] "GET / HTTP/1.1" 200 -
+2023-04-12 02:25:24,644, 172.17.0.1 - - [12/Apr/2023 02:25:24] "GET /static/css/main.css HTTP/1.1" 200 -
+2023-04-12 02:25:25,194, 172.17.0.1 - - [12/Apr/2023 02:25:25] "GET /favicon.ico HTTP/1.1" 404 -
+2023-04-12 02:25:35,140, 172.17.0.1 - - [12/Apr/2023 02:25:35] "GET /metrics HTTP/1.1" 200 -
+2023-04-12 02:25:37,977, 172.17.0.1 - - [12/Apr/2023 02:25:37] "GET /metrics HTTP/1.1" 200 -
+2023-04-12 02:25:38,873, 172.17.0.1 - - [12/Apr/2023 02:25:38] "GET /metrics HTTP/1.1" 200 -
+2023-04-12 02:25:43,114, Article "CNCF Cloud Native Interactive Landscape" retrieved!
+2023-04-12 02:25:43,116, 172.17.0.1 - - [12/Apr/2023 02:25:43] "GET /4 HTTP/1.1" 200 -
+2023-04-12 02:25:43,148, 172.17.0.1 - - [12/Apr/2023 02:25:43] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-04-12 02:25:45,991, Article with ID "7" does not exist!
+2023-04-12 02:25:45,991, Article with ID "7" does not exist!
+2023-04-12 02:25:45,996, 172.17.0.1 - - [12/Apr/2023 02:25:45] "GET /7 HTTP/1.1" 404 -
+2023-04-12 02:25:46,026, 172.17.0.1 - - [12/Apr/2023 02:25:46] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-04-12 02:25:48,353, Article "Kubernetes Certification" retrieved!
+2023-04-12 02:25:48,354, 172.17.0.1 - - [12/Apr/2023 02:25:48] "GET /6 HTTP/1.1" 200 -
+2023-04-12 02:25:48,375, 172.17.0.1 - - [12/Apr/2023 02:25:48] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-04-12 02:25:51,379, Article with ID "0" does not exist!
+2023-04-12 02:25:51,379, Article with ID "0" does not exist!
+2023-04-12 02:25:51,381, 172.17.0.1 - - [12/Apr/2023 02:25:51] "GET /0 HTTP/1.1" 404 -
+2023-04-12 02:25:51,404, 172.17.0.1 - - [12/Apr/2023 02:25:51] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-04-12 02:25:55,005, About Us page retrieved!
+2023-04-12 02:25:55,009, 172.17.0.1 - - [12/Apr/2023 02:25:55] "GET /about HTTP/1.1" 200 -
+2023-04-12 02:25:55,030, 172.17.0.1 - - [12/Apr/2023 02:25:55] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-04-12 02:26:01,254, 172.17.0.1 - - [12/Apr/2023 02:26:01] "GET /heathz HTTP/1.1" 404 -
+2023-04-12 02:26:16,782, 172.17.0.1 - - [12/Apr/2023 02:26:16] "GET /metrics HTTP/1.1" 200 -
+2023-04-12 02:26:29,219, 172.17.0.1 - - [12/Apr/2023 02:26:29] "GET /healthz HTTP/1.1" 200 -
+2023-04-12 02:27:23,699, 172.17.0.1 - - [12/Apr/2023 02:27:23] "GET / HTTP/1.1" 200 -
+2023-04-12 02:27:23,724, 172.17.0.1 - - [12/Apr/2023 02:27:23] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-04-12 02:27:46,145, 172.17.0.1 - - [12/Apr/2023 02:27:46] "GET / HTTP/1.1" 200 -
+2023-04-12 02:27:46,185, 172.17.0.1 - - [12/Apr/2023 02:27:46] "GET /static/css/main.css HTTP/1.1" 200 -
+2023-04-12 02:32:51,545, 172.17.0.1 - - [12/Apr/2023 02:32:51] "GET / HTTP/1.1" 200 -
+2023-04-12 02:32:51,575, 172.17.0.1 - - [12/Apr/2023 02:32:51] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-04-12 02:35:48,869, 172.17.0.1 - - [12/Apr/2023 02:35:48] "GET /healthz HTTP/1.1" 200 -
+2023-04-12 02:35:51,987, 172.17.0.1 - - [12/Apr/2023 02:35:51] "GET /metrics HTTP/1.1" 200 -
+2023-04-12 02:35:56,162, About Us page retrieved!
+2023-04-12 02:35:56,163, 172.17.0.1 - - [12/Apr/2023 02:35:56] "GET /about HTTP/1.1" 200 -
+2023-04-12 02:35:56,186, 172.17.0.1 - - [12/Apr/2023 02:35:56] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-04-12 02:35:58,242, Article "2020 CNCF Annual Report" retrieved!
+2023-04-12 02:35:58,243, 172.17.0.1 - - [12/Apr/2023 02:35:58] "GET /1 HTTP/1.1" 200 -
+2023-04-12 02:35:58,269, 172.17.0.1 - - [12/Apr/2023 02:35:58] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-04-12 02:36:00,545, Article "KubeCon + CloudNativeCon 2021" retrieved!
+2023-04-12 02:36:00,546, 172.17.0.1 - - [12/Apr/2023 02:36:00] "GET /2 HTTP/1.1" 200 -
+2023-04-12 02:36:00,572, 172.17.0.1 - - [12/Apr/2023 02:36:00] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-04-12 02:36:02,867, Article with ID "10" does not exist!
+2023-04-12 02:36:02,867, Article with ID "10" does not exist!
+2023-04-12 02:36:02,868, 172.17.0.1 - - [12/Apr/2023 02:36:02] "GET /10 HTTP/1.1" 404 -
+2023-04-12 02:36:02,895, 172.17.0.1 - - [12/Apr/2023 02:36:02] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-04-12 02:36:06,161, 172.17.0.1 - - [12/Apr/2023 02:36:06] "GET / HTTP/1.1" 200 -
+2023-04-12 02:36:06,182, 172.17.0.1 - - [12/Apr/2023 02:36:06] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-04-12 02:36:08,007, 172.17.0.1 - - [12/Apr/2023 02:36:08] "GET /create HTTP/1.1" 200 -
+2023-04-12 02:36:08,033, 172.17.0.1 - - [12/Apr/2023 02:36:08] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-04-12 02:36:15,024, New article "Test1" created!
+2023-04-12 02:36:15,025, 172.17.0.1 - - [12/Apr/2023 02:36:15] "POST /create HTTP/1.1" 302 -
+2023-04-12 02:36:15,032, 172.17.0.1 - - [12/Apr/2023 02:36:15] "GET / HTTP/1.1" 200 -
+2023-04-12 02:36:15,063, 172.17.0.1 - - [12/Apr/2023 02:36:15] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-04-12 02:36:17,272, Article "Test1" retrieved!
+2023-04-12 02:36:17,274, 172.17.0.1 - - [12/Apr/2023 02:36:17] "GET /7 HTTP/1.1" 200 -
+2023-04-12 02:36:17,310, 172.17.0.1 - - [12/Apr/2023 02:36:17] "GET /static/css/main.css HTTP/1.1" 304 - 
