@@ -1,9 +1,11 @@
 import sqlite3
 import json
 import logging
+import sys
 from flask import Flask, jsonify, json, render_template, request, url_for, redirect, flash
 from werkzeug.exceptions import abort
 connection_count = 0
+
 # Function to get a database connection.
 # This function connects to database with the name `database.db`
 def get_db_connection():
@@ -29,7 +31,16 @@ def get_post(post_id):
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your secret key'
 
-logging.basicConfig(format='%(asctime)s, %(message)s', level=logging.DEBUG)
+# Configure logging
+logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s', level=logging.DEBUG, stream=sys.stdout)
+
+# Create a file handler for logging to STDERR
+stderr_handler = logging.StreamHandler(sys.stderr)
+stderr_handler.setLevel(logging.DEBUG)
+stderr_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+
+# Add the STDERR handler to the logger
+logging.getLogger().addHandler(stderr_handler)
 
 # Define the main route of the web application 
 @app.route('/')
