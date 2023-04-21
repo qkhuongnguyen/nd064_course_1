@@ -56,7 +56,7 @@ def index():
 def post(post_id):
     post = get_post(post_id)
     if post is None:
-        logging.warning('Article with ID "{}" does not exist!'.format(post_id))
+#        logging.warning('Article with ID "{}" does not exist!'.format(post_id))
         return render_template('404.html'), 404
     else:
         return render_template('post.html', post=post)
